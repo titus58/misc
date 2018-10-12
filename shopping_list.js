@@ -57,7 +57,6 @@ app.post('/items', function (req, res) {
 });
 
 app.delete('/items/:itemId', function (req, res) {
-  console.log("vlad");
   req.webtaskContext.storage.get(function(readErr, data){
     if(readErr){
       console.error('Reading from database failed', readErr);
