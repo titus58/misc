@@ -17,8 +17,5 @@ class Item(db.Model):
 	def serialize(self):
 		return {'name': self.name, 'quantity': self.quantity}
 	
-
-@app.route('/')
-def hello_world():
-	items = list(map(lambda x: x.serialize(), Item.query.all()))
-	return jsonify(items=items)
+from blueprints.item.controller import items_bp
+app.register_blueprint(items_bp)
