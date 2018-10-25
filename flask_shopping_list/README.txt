@@ -1,0 +1,1 @@
+A training app for trying out Flask and SQLAlchemy
