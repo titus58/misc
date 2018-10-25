@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Items</title>
+</head>
+<body>
+<table border='1'>
+{% for item in items %}
+	<tr>
+		<td> {{ item.name }} </td>
+		<td> {{ item.quantity}} </td>
+	</tr>
+{% endfor %}
+</table>
+</body>
+</html>
